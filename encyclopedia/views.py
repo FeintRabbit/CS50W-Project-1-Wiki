@@ -13,10 +13,13 @@ def index(request):
 
 def entry(request, entry):
     markdown = util.get_entry(entry)
+    print(entry)
     if not markdown:
         return redirect("not-found")
     html = markdowner.convert(util.get_entry(entry))
-    return render(request, "encyclopedia/entry.html", {"entry": html})
+    return render(
+        request, "encyclopedia/entry.html", {"title": entry.capitalize(), "html": html}
+    )
 
 
 def notFound(request):
