@@ -1,0 +1,6 @@
+{
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true,
+  "python.pythonPath": "d:\\Dev\\Workspaces\\Tutorial Projects\\CS50-web\\wiki\\env\\Scripts\\python.exe",
+  "python.formatting.provider": "black"
+}
