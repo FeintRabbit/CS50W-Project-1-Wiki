@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %} {% block title %} Edit {% endblock %}
+
+<!--  -->
+{% block body %}
+
+<!-- New entry -->
+<h4>Edit: {{ title }}</h4>
+
+<!-- https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#url -->
+<form action="{% url 'edit' title %}" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="Save" />
+</form>
+<!--  -->
+{% endblock %}
