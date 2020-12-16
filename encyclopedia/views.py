@@ -74,7 +74,7 @@ def new(request):
             # check if title exists, error
             if title.lower() in [entry.lower() for entry in entries]:
                 error = (
-                    f"Page for '{title}' already exists <a href='entry/{title}'>here<a>"
+                    f"Page for '{title}' already exists <a href='wiki/{title}'>here<a>"
                 )
                 return render(request, "encyclopedia/error.html", {"error": error})
 

@@ -6,7 +6,7 @@
 <!-- entry -->
 {{ html|safe }}
 
-<a href="/entry/edit/{{ title }}"><button>Edit</button></a>
+<a href="{% url 'edit' title %}"><button>Edit</button></a>
 
 <!--  -->
 {% endblock %}
